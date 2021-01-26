@@ -1,9 +1,15 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { MainPage } from './components/MainPage'
+import './App.scss';
 
 export const App = () => {
-  return ( 
-    <div className="App">
-      
-    </div>
+
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={MainPage} exact />
+     </Switch>
+    </BrowserRouter>
   );
 }
